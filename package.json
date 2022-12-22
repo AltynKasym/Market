@@ -1,6 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
+  "homepage": "https://altynkasym.github.io/Market/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,7 +12,9 @@
     "lint-ts-fix": "eslint . --ext .ts,.tsx --fix",
     "lint-styles": "stylelint \"**/*.{css,scss,sass}\"",
     "lint-styles-fix": "stylelint \"**/*.{css,scss,sass}\" --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@greatsumini/react-facebook-login": "^3.2.1",
@@ -26,6 +29,7 @@
     "dayjs": "1.11.5",
     "formik": "2.2.9",
     "gapi-script": "1.2.0",
+    "gh-pages": "^4.0.0",
     "lodash": "4.17.21",
     "pusher-js": "7.4.0",
     "react": "18.2.0",
