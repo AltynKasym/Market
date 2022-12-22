@@ -1,0 +1,42 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.content {
+    .input {
+        width: 384px !important;
+        padding: 0 17px;
+        border-radius: 8px;
+    }
+
+    .textarea {
+        width: 100%;
+        background-color: white;
+        border: 1px solid #E5E6E6;
+        border-radius: 4px;
+        height: 160px;
+        align-items: flex-start;
+        padding: 10px 17px;
+        @include font-default(400, 16px, 110%, black);
+    }
+
+    .errBorder {
+        border: 1px solid $color-error-primary;
+    }
+
+    .btn {
+        margin-top: 8px;
+    }
+
+    .err {
+        padding: 0 10px;
+        @include flex-row(flex-start, flex-start);
+        @include font-default(400, 12.5px, 10px, $color-error-primary);
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .content {
+        .input, .btn {
+            width: 100% !important;
+        } 
+    }}

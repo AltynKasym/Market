@@ -1,0 +1,26 @@
+.item {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+
+    .about {
+        .subtitle {
+            color: #444444;
+            font-size: 14px;
+            font-weight: 700;
+
+            span {
+                color: #d62c54;
+            }
+        }
+
+        .text {
+            color: #706D7A;
+            font-size: 12px;
+        }
+    }
+}

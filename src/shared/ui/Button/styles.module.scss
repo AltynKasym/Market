@@ -1,0 +1,41 @@
+@import "@/shared/styles/mixins";
+
+
+.button.viewTypeDefault {
+    --color-bg: #2A2349;
+    --colog-bg-hover: #7165AB;
+}
+
+.button.viewTypeBlue {
+    --color-bg: #00CCDB;
+    --colog-bg-hover: #2FBDC4FF;
+}
+
+
+.button {
+    padding: 14px 48px;
+    @include center-elements();
+    gap: 8px;
+    background-color: var(--color-bg);
+    border-radius: 8px;
+    @include font-default(700, 14px, 17px, white);
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: var(--colog-bg-hover);
+        transition: 0.2s;
+    }
+
+    &:enabled:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        cursor: default;
+        background-color: gray;
+    }
+
+    &:focus {
+        border: 1px solid #4B5FA5;
+    }
+}

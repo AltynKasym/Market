@@ -1,0 +1,149 @@
+.root {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+    z-index: 6000;
+
+    .chartWrapper {
+        position: absolute;
+        width: 1002px;
+        height: 605px;
+        top: 0;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        z-index: 5201;
+        margin: auto;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 8px;
+        background: white;
+
+        .head {
+            width: 100%;
+            height: 92px;
+            background: #F2F2F2;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px 0 42px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+
+            img {
+                height: 16px;
+                width: 16px;
+                transition: 0.8s;
+                cursor: pointer;
+                margin-top: 16px;
+
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                font: 700 24px/100% 'Inter';
+                color: #000000;
+            }
+        }
+
+        .chartBock {
+            width: 100%;
+            height: 513px;
+            display: flex;
+            padding: 52px 0 0 20px;
+            gap: 22px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            .chart {
+                background-color: white;
+
+
+                .window {
+                    height: 107px;
+                    min-width: 214px;
+                    background-color: rgb(255, 255, 255);
+                    color: #444444;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 19px 0 18px 16px;
+
+                    .windowData {
+                        font: 700 16px/120% 'Inter';
+                    }
+
+                    .windowNumber {
+                        font: 400 14px/16.8px 'Inter';
+                    }
+                }
+            }
+
+            .textBlock {
+                img {
+                    height: 80px;
+                    width: 44px;
+                }
+
+                .title {
+                    margin: 0 0 16px 9px;
+                    font: 700 16px/120% 'Inter';
+                    color: #444444;
+                }
+
+                .descr {
+                    margin-left: 9px;
+                    font: 400 14px/17px 'Inter';
+                    color: #444444;
+                }
+
+                .block {
+                    margin-top: 25px;
+                    height: 296px;
+                    width: 248px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 18px 24px 28px 24px;
+                    background-color: white;
+                    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+                    border-radius: 8px;
+
+                    .titleRock {
+                        font: 700 24px/100% 'Inter';
+                        color: #2A2349;
+                        margin: 14px 0 8px;
+                    }
+
+                    .descrRock {
+                        font: 400 16px/110% 'Inter';
+                        color: #2A2349;
+                        max-width: 200px;
+                    }
+
+                    .btn {
+                        margin-top: 25px;
+                        background: #00CCDB;
+                        border-radius: 8px;
+                        font: 700 14px/17px 'Inter';
+                        text-transform: uppercase;
+                        height: 40px;
+                        width: 200px;
+                        color: #FFFFFF;
+                        transition: 0.2s;
+
+                        &:hover {
+                            transform: scale(0.98);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

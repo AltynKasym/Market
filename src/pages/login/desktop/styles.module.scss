@@ -1,0 +1,81 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    min-height: 100vh;
+    padding: 48px 0;
+    background-color: $color-bg-primary;
+
+    .container {
+        background-color: $color-bg-primary;
+        @include center-elements();
+
+        .content {
+            padding-top: 48px;
+            width: 100%;
+            @include flex-col(center);
+            background-color: white;
+            position: relative;
+
+            .closeBtn {
+                position: absolute;
+                right: 8px;
+                top: 8px;
+            }
+
+            .logo {
+                align-self: center;
+            }
+
+            .forms {
+                @include flex-row(space-between, flex-start);
+                padding: 86px 226px 10px 222px;
+
+                .line {
+                    width: 1px;
+                    height: 352px;
+                    align-self: center;
+                    background-color: #E5E6E6;
+                    transform: translateY(-50px);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-height: 890px) {
+    .root {
+        padding: 0;
+        @include center-elements();
+
+        .container {
+            .content {
+                .forms {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $xl) {
+    .root {
+        .container {
+            .content {
+                .forms {
+                    //padding: 50px 80px;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .line {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

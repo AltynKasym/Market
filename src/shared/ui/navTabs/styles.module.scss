@@ -1,0 +1,90 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    display: flex;
+    gap: 48px;
+
+    li {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        @include font-default(400, 16px, 18px, #706D7A);
+        background-color: transparent;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        img {
+            height: 26px;
+            padding: 0 12px;
+            display: none;
+        }
+    }
+
+    .active {
+        position: relative;
+        height: 45px;
+        padding: 0 7px 0 10px;
+        @include flex-row(unset, center);
+        background-color: $color-bg-primary;
+        color: $color-text-primary-1;
+        border: 1px solid #E0E0E0;
+        border-bottom: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: $color-link-primary;
+            transition: 0.4s;
+            animation: line 1.2s 1;
+        }
+    }
+}
+
+
+@keyframes line {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .root {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: $md) {
+    .root {
+        justify-content: space-between;
+        gap: 0;
+
+        li {
+            span {
+                display: none;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        .active {
+            padding: 0 12px;
+        }
+    }
+}

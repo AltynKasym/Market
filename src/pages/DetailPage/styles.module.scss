@@ -1,0 +1,97 @@
+.root {
+    font-family: 'Inter';
+    background: #fafafa;
+    padding-bottom: 200px;
+
+    .crumb {
+        padding: 36px 0px;
+    }
+
+    .favoriteBlock {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+        }
+
+        .favorite {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            cursor: pointer;
+
+            button {
+                width: 32px;
+                height: 32px;
+                background: #FFFFFF;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 100%;
+                background: url(@/assets/icons/detail/heart.svg) no-repeat;
+                background-position: 50%;
+            }
+
+            .favoriteText {
+                color: #2A2349;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        //justify-content: space-between;
+        //width: 100%;
+        //flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1200px) {
+    .root {
+        .wrapper {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .root {
+        .wrapper {
+            flex-direction: column;
+            gap: 50px;
+
+            .descriptionWrapper {
+                width: 656px;
+
+                .title {
+                    font: 700 24px 'Inter';
+                    color: #444444;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .root {
+        .favoriteBlock {
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-start;
+
+            .favorite {
+                button {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+}

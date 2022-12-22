@@ -1,0 +1,64 @@
+.dropDown {
+    z-index: 100;
+    width: 332px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 650px ;
+    background-color: #272727;
+    border: 1px solid #5F5F5F;
+    border-radius: 12px;
+
+    .columnAppliedCount {
+        display: flex;
+        gap: 13px;
+
+        .title {
+            font: 600 18px/26px "Jost";
+            color: white;
+        }
+
+        .value {
+            padding: 4px 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            background-color: #D34818;
+            border-radius: 20px;
+            font: 600 16px/23px "Jost";
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .columnListLabel {
+        font: 400 18px/26px "Jost";
+        color: white;
+    }
+
+    .columnList {
+        margin-top: 12px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .columnItem {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            opacity: 0.8;
+            font: 400 16px/100% "Jost";
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 6px;
+        }
+
+        .selectedColumnItem {
+            border-color: #D34818;
+        }
+    }
+}

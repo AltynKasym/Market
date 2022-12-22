@@ -1,0 +1,85 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.favorite {
+    padding-bottom: 118px;
+
+    .empty {
+        text-align: center;
+        width: 100%;
+        padding: 100px 0;
+
+        p {
+            @include font-default(700, 24px, 24px, $color-text-primary-1);
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 40px 0 20px 0;
+
+        .title {
+            @include font-default(700, 24px, 24px, $color-text-primary-1);
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 18%);
+        gap: 24px;
+        justify-content: space-between;
+    }
+}
+
+
+
+@media (max-width: $xl) {
+    .favorite {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 23%);
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: $lg) {
+    .favorite {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 31%);
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .favorite {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 47%);
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: $sm) {
+    .favorite {
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(1, 248px);
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.phoneInputList {
+    width: 100%;
+
+    .addButton {
+        margin-bottom: 21px;
+        @include font-default(400, 16px, 17.6px, $color-link-primary);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .phoneInputWrap {
+        position: relative;
+        width: 384px;
+    }
+
+    .btnPhoneDelete {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 70;
+        width: 22px;
+        height: 22px;
+        @include center-elements();
+        border-radius: 50%;
+        background-color: #D62C54;
+
+        &:hover {
+            background-color: #DA798E;
+            transition: 0.2s;
+        }
+
+        &:enabled:active {
+            transform: scale(0.91);
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: gray;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .phoneInputList {
+        .phoneInputWrap {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.button {
+    width: 112px;
+    height: 112px;
+    padding: 33px 25px 27px;
+    @include flex-col(center, center);
+    background-color: white;
+    border: 1px solid #D0D9DE;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+
+    .icon {
+        fill: #D0D9DE;
+    }
+
+    .text {
+        @include font-default(400, 12px, 14.4px, #D0D9DE);
+    }
+
+    &:hover {
+        border-color: #7165AB;
+    }
+
+    &:hover > .icon {
+        fill: #7165AB;
+    }
+
+    &:hover > .text {
+        color: #7165AB;
+    }
+
+    &:enabled:active {
+        transform: scale(0.98);
+    }
+}

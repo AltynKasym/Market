@@ -1,0 +1,258 @@
+
+.linkBnts {
+    width: 100%;
+    height: 48px;
+    background: #2A2349;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .linksBlock {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .bntBlock {
+                height: 100%;
+                display: flex;
+
+                .link {
+                    position: relative;
+                    width: 136px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 48px;
+                    color: #FAFAFA;
+                    font: 400 14px/120% 'Inter';
+                }
+
+                .linkActive {
+                    position: relative;
+                    padding: 0 26px;
+                    display: flex;
+                    align-items: center;
+                    height: 48px;
+                    background-color: white;
+                    color: #444444;
+                    font: 400 14px/120% 'Inter';
+                    transition: 0.4s;
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        width: 100%;
+                        height: 4px;
+                        background: #00CCDB;
+                        transition: 0.4s;
+                        animation: line 1.2s 1;
+                    }
+
+                    @keyframes line {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .line {
+                height: 32px;
+                width: 2px;
+                margin-left: 5px;
+                background-color: #828282;
+            }
+
+            .locationBlock {
+                margin: 0 20px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .locationTitle {
+                    font: 400 14px/120% 'Inter';
+                    color: #E0E0E0;
+                    margin-right: 16px;
+                }
+
+                .locationImg {
+                    height: 16px;
+                    width: 12.8px;
+                    margin-right: 9px;
+                    fill: #E0E0E0;
+                }
+
+                .locationDescr {
+                    font: 400 14px/120% 'Inter';
+                    color: #00CCDB;
+                }
+            }
+        }
+
+        .userBlock {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+
+            .user {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                margin-right: 10px;
+
+                .userIcon {
+                    height: 22px;
+                    width: 22px;
+                }
+
+                .userText {
+                    font: 400 14px/120% 'Inter';
+                    color: #FFFFFF;
+                    margin-left: 8px;
+                }
+            }
+
+            .favorite {
+                display: flex;
+
+                .favIcon {
+                    height: 20px;
+                    width: 22px;
+                }
+
+                .favText {
+                    font: 400 16px/110% 'Inter';
+                    color: #FFFFFF;
+                    margin-left: 7px;
+                }
+            }
+
+            .message {
+                display: flex;
+                position: relative;
+
+                .mesIcon {
+                    height: 18px;
+                    width: 22px;
+                }
+
+                .row {
+                    position: absolute;
+                    z-index: 2;
+                    top: -2px;
+                    right: 20px;
+                    height: 12px;
+                    width: 12px;
+                    background: #00CCDB;
+                    border-radius: 50%;
+                }
+
+                .mesText {
+                    font: 400 14px/120% 'Inter';
+                    color: #FFFFFF;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .linkBnts {
+        .container {
+            .linksBlock {
+                .bntBlock {
+                    .link {
+                        width: 110px;
+                        justify-content: center;
+                    }
+
+                    .linkActive {
+                        width: 110px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .loactionBlock {
+                    margin-left: 15px;
+                }
+            }
+
+            .userBlock {
+                gap: 15px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .linkBnts {
+        .container {
+            .linksBlock {
+                .bntBlock {
+                    height: 100%;
+                    display: flex;
+                }
+
+                .loactionBlock {
+                    margin-left: 20px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .locationTitle {
+                        display: none;
+                    }
+                }
+            }
+
+            .userBlock {
+                .user {
+                    margin-right: 0;
+
+                    .userText {
+                        display: none;
+                    }
+                }
+
+                .favorite {
+                    .favText {
+                        display: none;
+                    }
+                }
+
+                .message {
+                    .row {
+                        top: -5px;
+                        right: -5px;
+                    }
+
+                    .mesText {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 769px) {
+    .linkBnts {
+        display: none;
+    }
+}

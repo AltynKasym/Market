@@ -1,0 +1,87 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.pagination {
+    @include font-default(400, 16px, 24px, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    .pages {
+        margin: 0 20px;
+        cursor: pointer;
+        // transition: all 0.2s;
+    }
+
+    .activePage {
+        @include font-default(700, 24px, 24px, #00CCDB);
+        margin: 0 20px;
+        border: 4px solid #00CCDB;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        min-height: 40px;
+        // padding: 2px 7px;
+        border-radius: 50% ;
+        // transition: all 0.2s;
+    }
+
+    .paginationButton {
+        fill: #2a2349;
+        transition: 0.1s all;
+        cursor: pointer;
+
+        &:hover {
+            fill: #00ccdb;
+            transition: 0.1s all;
+        }
+    }
+
+    
+        
+
+    * + * {
+        margin-left: 8px;
+    }
+}
+@media  (max-width: 992px) {
+    .pagination {
+        width: 100%;
+
+        .pages {
+            margin: 0 10px;
+        }
+
+        .activePage {
+            margin: 0 10px;
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
+}
+@media  (max-width: 577px) {
+    .pagination {
+        width: 100%;
+        overflow-y: scroll;
+        justify-content: flex-start;
+        padding-left: 15px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .pages {
+            margin: 0 10px;
+        }
+
+        .activePage {
+            margin: 0 10px;
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
+}

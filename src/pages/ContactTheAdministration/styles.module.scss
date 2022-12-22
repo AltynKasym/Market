@@ -1,0 +1,39 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.contactAdministraion {
+    background-color: #fafafa;
+    padding: 0 0 196px 0;
+
+    .content {
+        max-width: 656px;
+    }
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        margin-top: 8px;
+    }
+
+    .text {
+        @include font-default(400, 16px, 22px, $color-text-primary-1);
+        padding: 24px 0 20px 0;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .contactAdministraion {
+        padding: 24px 0 80px 0;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .contactAdministraion {
+        .text {
+            font-size: 14px;
+        }
+
+        .breadcrumb {
+            display: none;
+        }
+    }
+}

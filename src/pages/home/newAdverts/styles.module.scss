@@ -1,0 +1,42 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    padding: 41px 0;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        width: 30%;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .root {
+        .title {
+            width: 50%;
+            font-size: 22px;
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .root {
+        .title {
+            width: 80%;
+            font-size: 20px
+        }
+    }
+}
+
+
+@media (max-width: $sm) {
+    .root {
+        .title {
+            font-size: 18px;
+        }
+    }
+}

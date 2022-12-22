@@ -1,0 +1,156 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.content {
+    margin: 20px 0 150px 0;
+}
+
+.complaint {
+    background-color: #FAFAFA;
+}
+
+.table {
+    width: 100%;
+    border-radius: 8px;
+    border-bottom: 0;
+    border-spacing: 0;
+
+    .head {
+        border-bottom: 2px solid #2a2349;
+        font-weight: 700;
+        height: 3rem;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #2a2349;
+        height: 3rem;
+        overflow: hidden;
+
+        .control {
+            display: flex;
+            flex-wrap: nowrap
+        }
+
+        .settingBtn:nth-child(2) {
+            display: none;
+        }
+    }
+
+    .data {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30px 200px 200px 200px 1fr;
+        gap: 10px;
+        align-items: center;
+
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    .subtitle {
+        overflow: hidden;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .settingBtn {
+        border: 2px solid #00ccdb;
+        background: #00ccdb;
+        height: 35px;
+        align-items: center;
+        margin: 0 10px;
+        width: 130px;
+        border-radius: 3px;
+        color: #ffffff;
+
+        &:hover {
+            background: transparent;
+            color: #2a2349;
+            transition: all .4s;
+        }
+    }
+}
+
+.empty {
+    @include font-default(700, 24px, 24px, $color-text-primary-1);
+    text-align: center;
+    width: 100%;
+    padding: 150px 0;
+}
+
+@media screen and (max-width: $xl) {
+    .data {
+        grid-template-columns: (30px 170px 170px 170px 1fr) !important;
+    }
+}
+
+
+@media screen and (max-width: $lg) {
+    .data {
+        grid-template-columns: (30px 150px 150px 150px 1fr) !important;
+        gap: 5px !important;
+    }
+
+    .settingBtn {
+        width: 95px !important;
+    }
+}
+
+
+@media screen and (max-width: $md) {
+    .content {
+        overflow-x: scroll !important;
+
+        .data {
+            grid-template-columns: (30px 120px 120px 1fr) !important;
+
+            span:nth-child(4) {
+                display: none;
+            }
+        }
+    }
+
+    .table {
+        .row {
+            .settingBtn:nth-child(1) {
+                display: none;
+            }
+
+            .settingBtn:nth-child(2) {
+                display: block;
+                width: 40px !important;
+            }
+        }  
+    }
+}
+
+@media screen and (max-width: 472px) {
+    .content {
+        overflow-x: scroll !important;
+
+        .data {
+            grid-template-columns: (20px 100px 1fr) !important;
+
+            span:nth-child(5) {
+                display: none;
+            }
+        }
+    }
+
+    .table {
+        .row {
+            .settingBtn:nth-child(1) {
+                display: none;
+            }
+
+            .settingBtn:nth-child(2) {
+                display: block;
+                width: 40px !important;
+            }
+        }  
+    }
+}

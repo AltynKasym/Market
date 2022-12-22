@@ -1,0 +1,30 @@
+.saleType {
+    //    width: 150px;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 600 14px/100% "Source Sans Pro";
+    color: #fff;
+    border-radius: 4px;
+    z-index: 100;
+
+
+
+    &:nth-child(1) {
+        background-color: #d62c54;
+    }
+
+    &:nth-child(2) {
+        background-color: #2a2349;
+    }
+
+
+    &:nth-child(3) {
+        background-color: #00CCDB;
+    }
+}
+
+.unVisable {
+    display: none;
+}

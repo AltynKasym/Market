@@ -1,0 +1,35 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.line {
+    border: 1px solid #e0e0e0;
+}
+
+.quiz {
+    @include font-default(400, 16px, 32px, #2a2349);
+}
+
+.text {
+    transition: 0.2s;
+}
+
+.text:hover {
+    color: #00ccdb;
+}
+
+.subtitle {
+    @include font-default(700, 20px, 20px, $color-text-primary-1);
+    margin: 37px 0 7px 0;
+}
+
+
+@media screen and (max-width: $sm) {
+    .quiz {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin: 24px 0 7px 0;
+    }
+}

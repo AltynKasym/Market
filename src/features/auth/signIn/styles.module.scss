@@ -1,0 +1,54 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.container {
+    width: 332px;
+    padding: 10px 10px;
+    @include flex-col(center, center);
+
+    .title {
+        @include font-default(700, 20px, 100%, $color-text-primary-1);
+    }
+
+    .form {
+        margin-top: 29px;
+        width: 100%;
+        @include flex-col();
+
+        .link {
+            align-self: center;
+            @include font-default(400, 16px, 110%, $color-link-primary);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .submitBtn {
+            margin-top: 19px;
+            width: 269px;
+            align-self: center;
+        }
+    }
+
+    .helpMsg {
+        margin-top: 47px;
+        text-align: center;
+        @include font-default(400, 16px, 17.6px, $color-text-primary-1);
+    }
+}
+
+
+
+@media (max-width: $sm) {
+    .container {
+        .btnFacebook {
+            width: 270px;
+        }
+
+        .btnGoogle {
+            width: 270px;
+        }
+    }
+}

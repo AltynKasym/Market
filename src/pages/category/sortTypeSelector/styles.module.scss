@@ -1,0 +1,56 @@
+@import "@/shared/styles/vars.scss";
+@import "@/shared/styles/mixins.scss";
+
+
+.root {
+    .button {
+        display: inline-block;
+
+        span {
+            @include font-default(400, 14px, 120%, #BDBDBD);
+        }
+
+        .icon {
+            margin-left: 5px;
+            fill: #BDBDBD;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 45px;
+        }
+    }
+
+    .buttonActive {
+        padding-bottom: 6px;
+        display: inline-block;
+        user-select: none;
+        color: $color-text-primary-2;
+        border-bottom: 5px solid $color-link-primary;
+
+        span {
+            color: $color-text-primary-2;
+        }
+
+        .icon {
+            fill: $color-text-primary-2;
+        }
+
+        .revertedIcon {
+            transform: scaleX(-1);
+            margin-left: 5px;
+        }
+    }
+}
+
+
+@media (max-width: 380px) {
+    .root {
+        .button {
+            transform: scale(1.2);
+
+            span {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.mess {
+    padding: 27px 25px 35px 25px;
+    border: 1px solid #E0E0E0;
+    height: auto;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000000;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+    .imgBlock {
+        position: relative;
+
+        .download {
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            border-radius: 0 10px 0 0 ;
+            left: 0;
+            bottom: 0px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+
+    img {
+        width: 50%;
+        margin-bottom: 5px;
+    }
+}
+
+.myMess {
+    margin-left: 110px;
+}
+
+.otherMess {
+    margin-right: 110px;
+}

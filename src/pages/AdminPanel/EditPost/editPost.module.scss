@@ -1,0 +1,295 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    background-color: $color-bg-primary;
+
+    .container {
+        .title {
+            @include font-default(700, 24px, 100%, $color-text-primary-1);
+        }
+
+        .form {
+            margin-top: 16px;
+            padding-bottom: 68px;
+            @include flex-col(flex-start);
+            gap: 16px;
+
+            .field {
+                width: 100%;
+                @include flex-row(flex-start, center);
+
+                .label {
+                    max-width: 272px;
+                    width: 100%;
+                    @include font-default(700, 16px, 120%, $color-text-primary-1);
+
+                    .requiredSign {
+                        color: #D62C54;
+                    }
+                }
+
+                .dropDownCategory {
+                    width: 384px;
+                }
+
+                .dropDownSubCategory {
+                    width: 384px;
+                    height: 48px;
+                }
+
+                .productName {
+                    width: 384px;
+                    position: relative;
+
+                    .productNameHint {
+                        position: absolute;
+                        top: 52px;
+                        @include font-default(400, 12px, 14.4px, $color-text-secondary-2);
+                    }
+                }
+
+                .input {
+                    border-radius: 8px;
+                }
+            }
+
+            .priceField {
+                .priceInputs {
+                    @include flex-row(unset, center);
+                    gap: 33px;
+
+                    .toLabel {
+                        transform: translateY(-7px);
+                        @include font-default(700, 12px, 14.4px, $color-text-secondary-2);
+                    }
+                }
+            }
+
+            .messageField {
+                align-items: flex-start;
+
+                .textareaWrap {
+                    width: 100%;
+
+                    .textarea {
+                        max-width: 656px;
+                        max-height: 202px;
+                        width: 100%;
+                        height: 202px;
+                        resize: none;
+                    }
+                }
+            }
+
+            .imageField {
+                .imageFieldLabel {
+                    padding-right: 24px;
+                    @include flex-col();
+
+                    .subText {
+                        @include font-default(400, 12px, 14.4px, $color-text-secondary-2);
+                    }
+                }
+
+                .photos {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    @include flex-row(flex-start, center);
+                    gap: 24px;
+                }
+            }
+
+            .phoneField {
+                align-items: flex-start;
+
+                .phoneInput {
+                    width: 384px;
+                }
+
+                .phoneInputList {
+                    .addButton {
+                        margin-bottom: 21px;
+                        @include font-default(400, 16px, 17.6px, $color-link-primary);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+
+            .submitButton {
+                margin-bottom: 25px;
+                width: 284px;
+                height: 56px;
+                padding: 19.5px 0;
+
+                .icon {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .root {
+        .container {
+            .form {
+                .priceField {
+                    .priceInputs {
+                        width: 56%;
+                    }
+                }
+
+                .messageField {
+                    .textareaWrap {
+                        width: 140%;
+                    }
+                }
+
+                .imageField {
+                    width: 100%;
+
+                    .imageFieldLabel {
+                        min-width: 272px;
+                    }
+
+                    .photos {
+                        overflow-x: scroll;
+
+                        &::-webkit-scrollbar {
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .root {
+        .container {
+            .title {
+                @include font-default(700, 22px, 100%, $color-text-primary-1);
+            }
+
+            .form {
+                .field {
+                    .label {
+                        max-width: 100%;
+                        width: 230px;
+                        margin-right: 20px;
+                    }
+
+                    .dropDownCategory {
+                        width: 100%;
+                    }
+
+                    .dropDownSubCategory {
+                        width: 100%;
+                    }
+
+                    .productName {
+                        width: 100%;
+                    }
+                }
+
+                .priceField {
+                    .priceInputs {
+                        width: 100%;
+                    }
+                }
+
+                .messageField {
+                    .textareaWrap {
+                        width: 100%;
+                    }
+                }
+
+                .imageField {
+                    .imageFieldLabel {
+                        padding-right: 0;
+                        min-width: 150px;
+                    }
+
+                    .photos {
+                        width: 100%;
+                        @include flex-row(flex-start, center);
+                        gap: 24px;
+                    }
+                }
+
+                .phoneField {
+                    .label {
+                        width: 150px;
+                    }
+
+                    .phoneInput {
+                        width: 110%;
+                    }
+                }
+
+
+                .submitButton {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .root {
+        .container {
+            .title {
+                @include font-default(700, 19px, 100%, $color-text-primary-1);
+            }
+
+            .form {
+                .field {
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 10px;
+
+                    .label {
+                        max-width: 100%;
+                        width: 100%;
+                        margin-right: 0px;
+                    }
+                }
+
+                .priceField {
+                    gap: 10px;
+                }
+
+                .messageField {
+                    gap: 10px;
+                }
+
+                .imageField {
+                    gap: 10px;
+                }
+
+                .phoneField {
+                    gap: 10px;
+
+                    .phoneInput {
+                        width: 100%;
+                    }
+                }
+
+                .submitButton {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

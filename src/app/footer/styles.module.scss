@@ -1,0 +1,132 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.footer {
+    flex: 0 0 auto;
+    padding: 41px 0 55px 0;
+    background-color: #2A2349;
+    border-top: 4px solid $color-link-primary;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+
+        .aboutProject {
+            display: flex;
+            gap: 24px;
+
+            .title {
+                @include font-default(700, 20px, 20px, $color-link-primary);
+                margin-bottom: 8px;
+            }
+
+            .nav {
+                @include font-default(400, 14px, 28px, $color-bg-primary);
+                width: 248px;
+
+                a {
+                    &:hover {
+                        color: #00CCDB;
+                        transition: 0.2s;
+                    }
+                }
+            }
+
+            .cityBox {
+                margin-top: 41px;
+            }
+
+            .boxBlock {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+
+                .box {
+                    max-width: 600px;
+                    @include font-default(400, 14px, 28px, $color-bg-primary);
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: #00CCDB;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        .mediaBox {
+            margin-left: 24px;
+            @include font-default(400, 14px, 17px, $color-bg-primary);
+
+            .googleIcon {
+                margin: 8px 0 31px 0;
+            }
+
+            .media {
+                margin: 8px 0 34px 0;
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $xl) {
+    .footer {
+        .content {
+            gap: 24px;
+        }
+    }
+}
+
+
+@media (max-width: $lg) {
+    .footer {
+        .content {
+            .aboutProject {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .footer {
+        .content {
+            flex-direction: column;
+
+            .mediaBox {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $sm) {
+    .footer {
+        .content {
+            .aboutProject {
+                .title {
+                    font-size: 18px;
+                }
+
+                .nav, .box {
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+
+                .cityBox {
+                    margin-top: 24px;
+                }
+            }
+
+            .mediaBox {
+                font-size: 13px;
+            }
+        }
+    }
+}

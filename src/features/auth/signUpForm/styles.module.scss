@@ -1,0 +1,41 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.container {
+    width: 332px;
+    padding: 0 10px;
+    @include flex-col(center, center);
+
+    .title {
+        text-align: center;
+        @include font-default(700, 20px, 100%, $color-text-primary-1);
+    }
+
+    .form {
+        margin-top: 29px;
+        @include flex-col();
+
+        .agreementCheckBox {
+            margin-top: 5px;
+
+            .agreementCheckBoxText {
+                @include font-default(400, 16px, 110%, $color-text-primary-1);
+
+                a {
+                    color: $color-link-primary;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .submitBtn {
+            margin-top: 15px;
+            width: 269px;
+            align-self: center;
+        }
+    }
+}

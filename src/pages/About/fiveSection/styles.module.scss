@@ -1,0 +1,252 @@
+.five {
+    padding: 5px 75px;
+    overflow: hidden;
+
+    .oneBock {
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+            width: 745px;
+            height: 511px;
+            margin-right: 40px;
+        }
+
+        .text {
+            min-width: 405px;
+            max-width: 305px;
+            margin: 80px 0 0 150px;
+
+            .title {
+                font: 700 36px/44px 'Inter';
+                color: #2A2349;
+            }
+
+            .descr {
+                margin: 30px 0;
+                font: 400 18px/170% 'Inter';
+                color: #2A2349;
+            }
+
+            .price {
+                font: 700 24px/100% 'Inter';
+                color: #00CCDB;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .five {
+        padding: 0 20px;
+
+        .oneBock {
+            .icon {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+            }
+
+            .text {
+                margin: 80px 0 0 80px;
+            }
+        }
+
+        .twoBlock {
+            gap: 40px;
+            padding: 0 60px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .five {
+        gap: 30px;
+
+        .oneBock {
+            .icon {
+                margin-right: 0;
+                min-width: 495px;
+                height: auto;
+                max-width: none;
+            }
+
+            .text {
+                min-width: 205px;
+                max-width: 405px;
+                margin: 80px 0 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .five {
+        .oneBock {
+            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+
+            .icon {
+                margin-right: 0;
+                min-width: 250px;
+                height: auto;
+                max-width: 80%;
+                width: 80%;
+            }
+
+            .text {
+                margin: 0;
+                max-width: 850px;
+                min-width: 250px;
+                text-align: center;
+
+                .title {
+                    font: 700 30px/30px 'Inter';
+                }
+
+                .descr {
+                    margin: 20px 0;
+                    font: 400 18px/160% 'Inter';
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .five {
+        .oneBock {
+            .icon {
+                min-width: 250px;
+                max-width: 100%;
+            }
+
+            .text {
+                margin: 0;
+                max-width: 850px;
+                min-width: 250px;
+                text-align: center;
+
+                .title {
+                    font: 700 20px/22px 'Inter';
+                }
+
+                .descr {
+                    margin: 20px 0;
+                    font: 400 14px/130% 'Inter';
+                }
+            }
+        }
+    }
+}
+
+.animationOclock {
+    animation: animationOclock 40s 1s linear infinite;
+}
+
+@keyframes animationOclock {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+
+    6% {
+        transform: translate(23px, -19px) rotate(22.5deg);
+    }
+
+    12% {
+        transform: translate(51px, -26px) rotate(45deg);
+    }
+
+    18% {
+        transform: translate(80px, -22px) rotate(67.5deg);
+    }
+
+    25% {
+        transform: translate(106px, -7px) rotate(90deg);
+    }
+
+    31% {
+        transform: translate(124px, 15px) rotate(112.5deg)
+    }
+
+    37% {
+        transform: translate(131px, 43px) rotate(135deg);
+    }
+
+    44% {
+        transform: translate(127px, 73px) rotate(157.5deg);
+    }
+
+    50% {
+        transform: translate(113px, 97px) rotate(179deg);
+    }
+
+    56% {
+        transform: translate(87px, 117px) rotate(204.5deg);
+    }
+
+    62% {
+        transform: translate(56px, 123px) rotate(229deg);
+    }
+
+    68% {
+        transform: translate(29px, 121px) rotate(250.5deg);
+    }
+
+    75% {
+        transform: translate(7px, 103px) rotate(271deg);
+    }
+
+    81% {
+        transform: translate(-11px, 80px) rotate(292deg);
+    }
+
+    87% {
+        transform: translate(-17px, 59px) rotate(310deg);
+    }
+
+    94% {
+        transform: translate(-15px, 26px) rotate(336deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(360deg);
+    }
+}
+
+.animationCircleOne {
+    animation: animationCircleOne 3s 1s ease-in-out infinite alternate;
+}
+
+.animationCircleTwo {
+    animation: animationCircleOne 3s 1.4s ease-in-out infinite alternate;
+}
+
+.animationCircleThree {
+    animation: animationCircleOne 3s 1.8s ease-in-out infinite alternate;
+}
+
+.animationColor {
+    animation: animationColor 4s 0s linear infinite alternate;
+}
+
+@keyframes animationCircleOne {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes animationColor {
+    0% {
+        fill: #00CCDB;
+    }
+
+    100% {
+        fill: rgb(244, 105, 221);
+    }
+}

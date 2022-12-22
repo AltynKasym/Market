@@ -1,0 +1,76 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.articleHelp {
+    font-family: "Inter", sans-serif;
+    background-color: #fafafa;
+    padding: 0 0 85px 0;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+    }
+
+    .subtitle {
+        @include font-default(700, 20px, 20px, $color-text-primary-1);
+        margin: 37px 0 7px 0;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box {
+        max-width: 750px;
+        width: 100%;
+        @include font-default(400, 16px, 18px, $color-text-primary-1);
+    }
+
+    .answer {
+        padding: 30px 0 37px 0;
+    }
+
+    .faqContent {
+        width: 520px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .articleHelp {
+        .faqContent {
+            width: 100%;
+        }
+
+        .content {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .articleHelp {
+        padding: 24px 0 85px 0;
+
+        .content {
+            gap: 0;
+        }
+
+        .box {
+            font-size: 14px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin: 24px 0 7px 0;
+        }
+
+        .answer {
+            padding: 24px 0;
+        }
+
+        .breadcrumb {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.card {
+    max-width: 1067px;
+    background-color: white;
+    display: flex;
+    border-radius: 8px;
+
+    .imgContent {
+        position: relative;
+        width: 248px;
+
+
+        .imgWrap {
+            height: 184px;
+            width: 248px;
+
+            img {
+                border-bottom-left-radius: 8px;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .cameraIcon {
+            position: absolute;
+            left: 8px;
+            bottom: 8px;
+            z-index: 20;
+            background: black;
+            width: 48px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            padding: 0 8px;
+            //margin: 148px 0 0 8px;
+            justify-content: space-between;
+            @include font-default(400, 16px, 18px, #FFFFFF);
+        }
+    }
+
+    .cardInfo {
+        padding: 16px 24px;
+        width: 56%;
+
+        .price {
+            @include font-default(700, 20px, 20px, $color-text-primary-1);
+            margin-bottom: 5px;
+
+            span {
+                @include font-default(400, 16px, 18px, #00ccdb);
+            }
+        }
+
+        .title {
+            @include font-default(400, 16px, 18px, #2a2349);
+        }
+
+        .text {
+            @include font-default(400, 12px, 14px, #828282);
+            margin-top: 5px;
+
+            span {
+                color: $color-text-primary-1;
+            }
+        }
+
+        .info {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .btnPromote {
+                margin-top: 11px;
+                width: 178px;
+            }
+
+            .btnPromoteDisabled {
+                background-color: #E9EDF2;
+            }
+
+            .vit {
+                cursor: pointer;
+                display: flex;
+                gap: 4px;
+                @include font-default(400, 14px, 17px, #101010);
+            }
+        }
+    }
+
+    .settings {
+        .setting {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 16px;
+            @include font-default(400, 14px, 17px, #bdbdbd);
+            transition: all .4s;
+
+            .icon:hover {
+                color: $color-text-primary-1;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $color-text-primary-1;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $lg) {
+    .card {
+        padding: 0 5px 0 0;
+    }
+
+    .imgContent {
+        width: 325px !important;
+    }
+
+    .cardInfo {
+        padding: 10px !important;
+        width: 20%;
+
+        .vit {
+            span {
+                display: none;
+            }
+        }
+
+        .btn {
+            margin-top: 10px !important;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .card {
+        width: 248px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .cardInfo {
+            padding: 14px 4px !important;
+            width: 100%;
+        }
+
+        .settings {
+            position: absolute;
+            margin-left: 200px;
+
+            .setting {
+                .icon {
+                    box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
+
+                    &:hover {
+                        color: #FFFFFF !important;
+                    }
+                }
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

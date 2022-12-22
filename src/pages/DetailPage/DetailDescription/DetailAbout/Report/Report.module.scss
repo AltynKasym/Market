@@ -1,0 +1,108 @@
+.reportWindow {
+    width: 442px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background: white;
+
+    .title {
+        color: #444444;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 16px 0px 18px 28px;
+        background: #F2F2F2;
+    
+        .close {
+            background: url(@/assets/icons/detail/close.svg) no-repeat;
+            position: absolute;
+            right: 14px;
+            top: 6px;
+        }
+    }
+    
+    form {
+        padding: 21px 29px 14px 28px;
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+
+        .item {
+            .check {
+                appearance: none;
+            }
+
+            .check:checked+label::after {
+                background: #2A2349;
+            }
+
+            .check:checked+label::before {
+                content: '';
+                display: block;
+                width: 13px;
+                height: 9px;
+                position: absolute;
+                top: 20%;
+                left: 1px;
+                background: url(@/assets/images/detail/checked.svg) no-repeat;
+                z-index: 1;
+            }
+
+            label {
+                padding-left: 24px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    display: block;
+                    position: absolute;
+                    top: 2px;
+                    background: #FFFFFF;
+                    border: 1px solid #BDBDBD;
+                    border-radius: 4px;
+                    z-index: 0;
+                }
+            }
+
+            .area {
+                width: 100%;
+                max-width: 384px;
+                height: auto;
+                border: 1px solid #E5E6E6;
+                border-radius: 4px;
+                font-size: 16px;
+                padding-top: 11px;
+                padding-left: 11px;
+
+                &::placeholder {
+                    color: #706D7A;
+                }
+            }
+        }
+
+        .submit {
+            padding: 14px 48px;
+            background: #2A2349;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+        }
+
+        .errorText {
+            color: red;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .reportWindow {
+        width: 100%;
+    }
+}

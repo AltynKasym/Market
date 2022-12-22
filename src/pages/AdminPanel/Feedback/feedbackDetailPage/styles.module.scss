@@ -1,0 +1,35 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+
+.root {
+    padding: 30px 0 100px 0;
+    text-align: start;
+
+
+    .fromUser {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+    }
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-2);
+        padding: 15px 0;
+    }
+
+    .text {
+        @include font-default(400, 18px, 24px, #000);
+        // max-width: 1190px;
+        width: 100%;
+    }
+
+    .email {
+        @include font-default(400, 18px, 24px, $color-text-primary-2);
+    }
+
+    .infoBox {
+        text-align: end;
+        padding: 20px 0;
+        // max-width: 1190px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,159 @@
+.three {
+    width: 100%;
+    margin-top: 185px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+        max-width: 521px;
+        margin: 40px 30px 0 200px;
+
+        .title {
+            font: 700 48px/58px 'Inter';
+            color: #2A2349;
+        }
+
+        .descr {
+            margin-top: 30px;
+            font: 400 18px/170% 'Inter';
+            color: #2A2349;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .icon {
+        min-width: 367px;
+        min-height: 455px;
+        margin-right: 225px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .three {
+        .text {
+            margin: 40px 20px 0 80px;
+
+            .title {
+                font: 700 40px/50px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/170% 'Inter';
+            }
+        }
+
+        .icon {
+            min-width: 367px;
+            min-height: 455px;
+            margin-right: 80px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .three {
+        margin-top: 85px;
+
+        .text {
+            margin: 40px 20px 0 20px;
+
+            .title {
+                font: 700 38px/40px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/170% 'Inter';
+            }
+        }
+
+        .icon {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .three {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        margin-top: 60px;
+
+        .text {
+            margin: 0;
+            max-width: 900px;
+            text-align: center;
+
+            .title {
+                font: 700 30px/30px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/160% 'Inter';
+            }
+        }
+
+        .icon {
+            min-width: 250px;
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .three {
+        margin-top: 40px;
+
+        .text {
+            margin: 0;
+            max-width: 900px;
+            text-align: center;
+
+            .title {
+                font: 700 20px/22px 'Inter';
+            }
+
+            .descr {
+                margin-top: 20px;
+                font: 400 14px/130% 'Inter';
+            }
+        }
+
+        .icon {
+            min-width: 200px;
+            min-height: auto;
+        }
+    }
+}
+
+.animationHands {
+    animation: animationHands 1.4s 0.4s ease-in-out infinite alternate;
+}
+
+.animationLine {
+    animation: animationLine 1.4s 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes animationHands {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(8px)
+    }
+}
+
+@keyframes animationLine {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(8px)
+    }
+}

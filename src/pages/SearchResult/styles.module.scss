@@ -1,0 +1,46 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.searchRoot {
+    padding: 21px 0 41px;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        width: 30%;
+        padding-bottom: 15px;
+    }
+
+    .description {
+        @include font-default(700, 18px, 24px, $color-text-primary-1);
+    }
+}
+
+
+@media (max-width: $lg) {
+    .searchRoot {
+        .title {
+            width: 50%;
+            font-size: 22px;
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .searchRoot {
+        .title {
+            width: 80%;
+            font-size: 20px
+        }
+    }
+}
+
+
+@media (max-width: $sm) {
+    .searchRoot {
+        .title {
+            font-size: 18px;
+        }
+    }
+}

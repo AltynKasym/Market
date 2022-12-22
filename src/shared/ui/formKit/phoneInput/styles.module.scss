@@ -1,0 +1,26 @@
+@import "@/shared/styles/mixins";
+
+
+.root {
+    width: 100%;
+    position: relative;
+
+    .input {
+        padding-left: 75px !important;
+        border-radius: 8px !important;
+    }
+
+    .iconWrap {
+        position: absolute;
+        top: 12px;
+        left: 17px;
+        @include center-elements();
+        padding-right: 14px;
+        border-right: 1px solid #E0E0E0;
+
+        .icon {
+            fill: #BDBDBD;
+        }
+    }
+}
+

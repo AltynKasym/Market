@@ -1,0 +1,73 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.root {
+    @include font-default(700, 24px, 24px, #444444);
+    background: #fafafa;
+
+
+    .header {
+        .title {
+            font: 700 24px/24px "Inter";
+            color: #444444;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .adsNumber {
+            @include font-default(400, 16px, 24px, #706d7a);
+            margin-left: 7px;
+        }
+    }
+
+    .inner {
+        display: grid;
+        grid-template-columns: auto 248px;
+        gap: 24px;
+    }
+
+    .pagination {
+        margin: 50px 0;
+    }
+
+    .control {
+        @include font-default(400, 14px, 24px, #bdbdbd);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 7px;
+        margin: 16px 0 24px;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .root {
+        .inner {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 24px;
+        }
+    }
+}
+
+
+
+@media (max-width: $lg) {
+    .header {
+        .title {
+            font: 700 22px "Inter";
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .header {
+        .title {
+            font: 700 20px "Inter";
+            display: block;
+        }
+    }
+}
+
+

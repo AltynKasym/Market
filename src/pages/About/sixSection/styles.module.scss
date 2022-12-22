@@ -1,0 +1,220 @@
+.six {
+    max-width: 1077px;
+    display: flex;
+    gap: 44px;
+    margin: auto;
+    padding: 76px 20px;
+    overflow: hidden;
+
+    .icon {
+        margin-top: 44px;
+        min-width: 520px;
+        min-height: 357px;
+    }
+
+    .text {
+        width: 100%;
+
+        .title {
+            font: 700 48px/58px 'Inter';
+            color: #2A2349;
+        }
+
+        .descr {
+            margin: 30px 0;
+            font: 400 18px/150% 'Inter';
+            color: #454545;
+
+            span {
+                color: #00CCDB;
+                text-decoration: underline;
+            }
+        }
+
+        .condition {
+            font: 400 14px/21px 'Inter';
+            color: #999999;
+
+            span {
+                color: #00CCDB;
+            }
+        }
+    }
+}
+
+.twoBlock {
+    display: flex;
+    overflow: scroll;
+    max-width: 1290px;
+    border-top: 1px solid #CCCCCC;
+    gap: 50px;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin: 68px auto 65px;
+    padding-left: 110px;
+
+    &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+    .link {
+        white-space: nowrap;
+        padding-top: 27px;
+        font: 400 18px/22px 'Inter';
+        color: #CCCCCC;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .linkActive {
+        white-space: nowrap;
+        padding-top: 27px;
+        font: 700 18px/22px 'Inter';
+        color: #2A2349;
+        position: relative;
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background: #2A2349;
+            height: 5px;
+            width: 100%;
+        }
+    }
+}
+
+.animation {
+    position: relative;
+    animation: control 0.8s 1;
+    opacity: 1;
+}
+
+@keyframes control {
+    0% {
+        opacity: 0;
+    }
+
+    59% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1;
+        left: -100px;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .six {
+        padding: 50px 20px;
+    }
+
+    .twoBlock {
+        gap: 40px;
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 991px) {
+    .six {
+        .icon {
+            min-width: 420px;
+            min-height: 257px;
+        }
+
+        .text {
+            .title {
+                font: 700 36px/44px 'Inter';
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .six {
+        max-width: 100%;
+        gap: 30px;
+        padding: 50px 20px;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        .icon {
+            margin: 0;
+            max-width: auto;
+            max-height: auto;
+            width: 80%;
+        }
+
+        .text {
+            text-align: center;
+
+            .title {
+                font: 700 30px/30px 'Inter';
+            }
+
+            .descr {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .six {
+        padding: 30px 20px 0;
+
+        .icon {
+            min-width: 100%;
+        }
+
+        .text {
+            text-align: center;
+
+            .title {
+                font: 700 20px/22px 'Inter';
+            }
+
+            .descr {
+                font: 400 14px/130% 'Inter';
+            }
+        }
+    }
+}
+
+.animationBlock {
+    animation: animationBlock 3s 0s ease-in-out alternate infinite;
+}
+
+.animationFlower {
+    animation: animationFlower 5s 0.8s linear infinite;
+}
+
+@keyframes animationBlock {
+    0% {
+        transform: translate(0px, 0px) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(730px, 14px) scale(-1, 1);
+    }
+}
+
+@keyframes animationFlower {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

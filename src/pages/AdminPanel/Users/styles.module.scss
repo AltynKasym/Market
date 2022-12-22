@@ -1,0 +1,150 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.content {
+    margin: 10px 0 50px;
+}
+
+.buttons button {
+    background: #00ccdb;
+    padding: 6px 10px;
+    margin: 0 10px;
+    width: 60px;
+    border-radius: 3px;
+    color: #fff;
+
+    &:nth-child(2) {
+        display: none;
+    }
+}
+
+#table {
+    max-width: 1200px;
+    border-radius: 8px;
+    border-bottom: 0;
+    border-spacing: 0;
+
+    .head {
+        border-bottom: 2px solid #2a2349;
+        font-weight: 700;
+        height: 3rem;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #2a2349;
+        height: 3rem;
+        overflow: hidden;
+    }
+
+    .data {
+        display: grid;
+        grid-template-columns: (35px 200px 250px 250px);
+        gap: 10px;
+        align-items: center;
+
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    .subtitle {
+        overflow: hidden;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+   
+
+    .row {
+        display: flex;
+        justify-content: space-between  ;
+    }
+
+    .control {
+        display: flex;
+        flex-wrap: nowrap
+    }
+}
+
+.empty {
+    @include font-default(700, 24px, 24px, $color-text-primary-1);
+    text-align: center;
+    width: 100%;
+    padding: 150px 0;
+}
+
+@media screen and (max-width: $xl) {
+    .data {
+        grid-template-columns: (35px 150px 200px 200px) !important;;
+    }
+}
+
+
+@media screen and (max-width: $lg) {
+    .data {
+        grid-template-columns: (30px 120px 120px 150px) !important;
+        gap: 5px !important;
+    }
+    
+    // .settingBtn {
+    //     width: 95px !important;
+    // }
+}
+
+
+@media screen and (max-width: $md) {
+    .content {
+        overflow-x: scroll !important;
+    }
+
+    .data {
+        grid-template-columns: (30px minmax(100px, 130px) minmax(100px, 170px) ) !important;
+
+        span:nth-child(3) {
+            display: none;
+        }
+    }
+    
+    .buttons button {
+                   
+        padding: 9px 5px;
+        margin: 0 5px;
+        width: 40px;
+        border-radius: 3px;
+            
+        &:nth-child(1) {
+            display: none;
+        }
+
+        &:nth-child(2) {
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .content {
+        overflow-x: scroll !important;
+    }
+
+    .data {
+        grid-template-columns: (30px minmax(100px, 130px) ) !important;
+
+        span:nth-child(4) {
+            display: none;
+        }
+    }
+    
+    .buttons {
+        button {
+               
+            padding: 5px;
+            margin: 0 2px;
+            width: 30px;
+        }
+    }
+}

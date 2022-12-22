@@ -1,0 +1,158 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.tabs {
+    display: flex;
+    height: 48px;
+    gap: 12px;
+    margin: 35px 0 28px 0;
+    align-items: center;
+    @include font-default(400, 16px, 18px, #706d7a);
+    position: relative;
+
+    .isOpen {
+        .arrow {
+            transform: rotate(180deg);
+            transition: all .4s;
+        }
+    }
+
+    .search {
+        height: 48px;
+        background-color: #ffffff;
+        width: 384px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 0 17px;
+        align-items: center;
+        display: flex;
+        margin-top: calc(-10px);
+        margin-left: 5%;
+
+
+        .inp {
+            width: 90%;
+            height: 100%;
+            @include font-default(400, 16px, 18px, #706D7A)
+        }
+    }
+}
+
+.statusFilter {
+    display: flex;
+    gap: 48px;
+    color: #706d7a;
+
+    select {
+        display: none;
+        background-color: transparent;
+        @include font-default(400, 16px, 18px, #706d7a);
+    }
+
+    span {
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .inact {
+        padding: 0 7px 10px 10px;
+        display: flex;
+        align-items: center;
+        color: $color-text-primary-1;
+        transition: 0.4s;
+    }
+
+    .active {
+        position: relative;
+        padding: 0 7px 10px 10px;
+        display: flex;
+        align-items: center;
+        color: $color-text-primary-1;
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background: #00ccdb;
+            transition: 0.4s;
+            animation: line 1.2s 1;
+        }
+
+        @keyframes line {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.card {
+    margin-bottom: 22px;
+}
+
+@media screen and (max-width: $xl) {
+    .tabs, .statusFilter {
+        gap: 12px !important;
+    }
+
+    .search {
+        margin-left: 0% !important;
+    }
+
+    .arrow {
+        margin-left: 2px !important;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+
+        .search {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .statusFilter {
+            span {
+                display: none;
+            }
+
+            select {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .tabs {
+        font-size: 12px !important;
+        line-height: 16px;
+    }
+
+    .active {
+        position: relative;
+        padding: 0 6px 10px 6px;
+    }
+
+    .cards {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

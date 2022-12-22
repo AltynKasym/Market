@@ -1,0 +1,53 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    .textarea {
+        padding: 10px 12px;
+        background-color: white;
+        border: 1px solid #E5E6E6;
+        border-radius: 4px;
+        @include font-default(400, 16px, 110%, black);
+
+        &::placeholder {
+            @include font-default(400, 16px, 110%, #706D7A);
+        }
+
+        &:focus {
+            border: 1px solid #4B5FA5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba(248, 248, 248, 0.7);
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #373A3A;
+            border-radius: 10px;
+        }
+    }
+
+    .errorBorder {
+        border: 1px solid $color-error-primary;
+    }
+
+    .countLabel {
+        height: 16px;
+        @include font-default(400, 12px, 14.4px, $color-text-secondary-2);
+    }
+
+    .errorLabel {
+        height: 16px;
+        padding: 0 10px;
+        @include flex-row(flex-start, flex-start);
+        @include font-default(400, 12px, 14.4px, $color-error-primary);
+    }
+}
+
+

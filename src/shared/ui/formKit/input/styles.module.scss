@@ -1,0 +1,64 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    .inputWrap {
+        position: relative;
+
+        .input {
+            width: 100%;
+            height: 48px;
+            padding: 0 12px;
+            background-color: white;
+            border: 1px solid #E5E6E6;
+            border-radius: 4px;
+            @include font-default(400, 16px, 110%, black);
+
+            &::placeholder {
+                @include font-default(400, 16px, 110%, #706D7A);
+            }
+
+            &:focus {
+                border: 1px solid #4B5FA5;
+            }
+
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        .passwordIcon {
+            position: absolute;
+            top: 13.5px;
+            right: 16.81px;
+            fill: #BDBDBD;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                fill: #7165AB;
+                transition: 0.2s;
+                transform: scale(1.07);
+            }
+
+            &:active {
+                opacity: 0.5;
+            }
+        }
+
+        .errorBorder {
+            border: 1px solid $color-error-primary;
+        }
+    }
+
+    .errorLabel {
+        height: 16px;
+        padding: 0 10px;
+        @include flex-row(flex-start, flex-start);
+        @include font-default(400, 12.5px, 15px, $color-error-primary);
+    }
+}
+
+

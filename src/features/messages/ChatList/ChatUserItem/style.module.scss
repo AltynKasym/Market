@@ -1,0 +1,95 @@
+.root {
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        .logo {
+            position: relative;
+
+            .numberOfMessages {
+                width: 20px;
+                height: 20px;
+                background: #D62C54;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: -6px;
+                top: -6px;
+                font-size: 11px;
+                color: white;
+            }
+        }
+
+        .description {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .name {
+                color: #00CCDB;
+                font-size: 14px;
+            }
+
+            .productName {
+                color: #706D7A;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .lastMessage {
+                color: #828282;
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    .time {
+        color: #828282;
+        font-size: 12px;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .root {
+        padding: 8px;
+        padding-left: 2px;
+
+        .left {
+            gap: 10px;
+
+            .description {
+                width: 120px;
+
+                .name {
+                    white-space: nowrap;
+                }
+
+                .productName, .lastMessage {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+
+            .logo {
+                .img {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}

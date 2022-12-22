@@ -1,0 +1,48 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.list {
+    display: grid;
+    gap: 24px;
+}
+
+
+@media screen and (max-width: $xl) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .grid {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: $md) {
+    .grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 90%);
+    }
+}
+
+

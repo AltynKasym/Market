@@ -1,0 +1,59 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.faq {
+    background: #ffffff;
+    padding: 50px 20px 56px 55px;
+    box-shadow: 0px 4px 16px 0px #0000000a;
+    border-radius: 8px;
+    max-width: 520px;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        margin-bottom: 10px;
+    }
+
+    .quiz {
+        margin-top: 5px;
+        @include font-default(400, 16px, 32px, #2a2349);
+        transition: 0.2s;
+
+        &:hover {
+            color: #00ccdb;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .faq {
+        padding: 20px !important; 
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .faq {
+        max-width: 100%;
+        padding: 20px !important; 
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .faq {
+        max-height: 550px;
+
+        .quiz {
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .faq {
+        padding: 24px;
+
+        .title {
+            font-size: 20px;
+        }
+    }
+}

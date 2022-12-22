@@ -1,0 +1,21 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    @include font-default(400, 16px, 24px, black);
+    @include center-elements();
+    user-select: none;
+    gap: 8px;
+    
+    .button {
+        fill: $color-text-primary-2;
+        transition: 0.1s all;
+        cursor: pointer;
+
+        &:hover {
+            fill: $color-link-primary;
+            transition: 0.1s all;
+        }
+    }
+}

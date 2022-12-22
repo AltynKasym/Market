@@ -1,0 +1,117 @@
+.root {
+    max-width: 247px;
+
+    .price {
+        color: #2A2349;
+        font-weight: 700;
+        font-size: 36px;
+        margin-top: 24px;
+    }
+
+    .saler {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        padding: 40px 0px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #E0E0E0;
+
+        .name {
+            color: #444444;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    .contact {
+        .contactTitle {
+            color: #444444;
+            font-size: 16px;
+            font-weight: 700;
+
+            .showBtn {
+                color: #00CCDB;
+                font-size: 14px;
+                cursor: pointer;
+                margin-bottom: 14px;
+            }
+
+            .showBtnTrue {
+                color: #849b9d;
+                font-size: 14px;
+                margin-bottom: 14px;
+                cursor: auto;
+            }
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 221px;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+
+            .itemTitle {
+                color: #706D7A;
+                font-size: 14px;
+            }
+
+            .numbers {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                width: 141px;
+
+                .number {
+                    font-size: 16px;
+                    color: #444444;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        button {
+            width: 247px;
+            font-weight: 700;
+            border-radius: 8px ;
+            color: #FFFFFF;
+            font-size: 14px;
+            padding-left: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .telegram {
+            background: #2A2349;
+            height: 48px;
+        }
+
+        .whats {
+            background: #69A042;
+            height: 40px;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .root {
+        .price {
+            display: none;
+        }
+    }
+}

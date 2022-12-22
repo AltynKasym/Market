@@ -1,0 +1,88 @@
+@import "@/shared/styles/vars";
+
+.root {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: $color-bg-primary;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    .wallpaper {
+        margin-top: 48px;
+        background: white;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 96px 0;
+        width: 100%;
+
+        .closeBtn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+
+        img {
+            margin-bottom: 69px;
+        }
+
+        .title {
+            max-width: 648px;
+            font: 700 20px/100% 'Inter';
+            color: #444444;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            gap: 8px;
+
+            input {
+                width: 312px;
+                height: 48px;
+                background: #FFFFFF;
+                border: 1px solid #E5E6E6;
+                border-radius: 4px;
+                font: 400 16px/110% 'Inter';
+                padding-left: 11px;
+
+                &::placeholder {
+                    font: 400 16px/110% 'Inter';
+                }
+            }
+
+            .btn {
+                background: red;
+                padding: 14px 48px;
+                background: #2A2349;
+                border-radius: 8px;
+                text-transform: uppercase;
+                font: 700 14px/17px 'Inter';
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+@media (max-width: 769px) {
+    .root {
+        .wallpaper {
+            form {
+                flex-direction: column;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

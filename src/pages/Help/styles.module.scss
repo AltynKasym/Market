@@ -1,0 +1,84 @@
+@import "@/shared/styles/mixins";
+@import "@/shared/styles/vars";
+
+.help {
+    font-family: "Inter", sans-serif;
+    background-color: #fafafa;
+    padding: 0 0 90px 0;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        margin-top: 10px;
+    }
+
+    .content {
+        display: flex;
+        gap: 24px;
+    }
+
+    .box {
+        width: 355px;
+    }
+
+    .subtitle {
+        @include font-default(700, 20px, 20px, #2a2349);
+        margin: 32px 0 12px 0;
+    }
+
+    .quiz {
+        @include font-default(400, 16px, 32px, #2a2349);
+        transition: all .2s;
+        margin-bottom: 2px;
+
+        &:hover {
+            color: #00ccdb;
+        }
+    }
+
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .faqContent {
+        margin-top: 28px;
+        width: 520px;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .help {
+        padding: 35px 0 50px 0;
+
+        .box {
+            width: 280px;
+        }
+
+        .faqContent {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .content {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .help {
+        .boxes {
+            flex-wrap: wrap;
+        }
+
+        .quiz {
+            font-size: 14px;
+        }
+
+        .subtitle {
+            margin: 20px 0 7px 0;
+        }
+    }
+}

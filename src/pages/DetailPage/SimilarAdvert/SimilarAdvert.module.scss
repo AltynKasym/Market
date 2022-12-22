@@ -1,0 +1,24 @@
+.root {
+    margin-top: 44px;
+    padding-top: 43px;
+    border-top: 1px solid #E0E0E0 ;
+    max-width: 1064px;
+
+    .title {
+        margin-bottom: 21px;
+        color: #444444;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+@media (max-width: 998px) {
+    .root {
+        width: 100%;
+    }
+}

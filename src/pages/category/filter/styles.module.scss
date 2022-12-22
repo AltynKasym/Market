@@ -1,0 +1,152 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.filter {
+    @include font-default(400, 16px, 24px, $color-text-primary-1);
+    margin-top: -27px;
+    user-select: none;
+
+    .title {
+        @include font-default(700, 24px, 24px, $color-text-primary-1);
+        padding-bottom: 28px;
+    }
+
+    .form {
+        padding: 8px 16px 28px;
+        background: white;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: 0.1s;
+    }
+
+    .price {
+        margin: 0 8px;
+        width: 64px;
+        height: 32px;
+        background: $color-bg-primary;
+        border: 1px solid #BDBDBD;
+        border-radius: 4px;
+    }
+
+    .formHeader {
+        display: flex;
+        align-items: center;
+        padding-top: 16px;
+        user-select: none;
+
+        * {
+            cursor: pointer;
+        }
+    }
+
+    .subTitle {
+        @include font-default(700, 16px, 19px, $color-text-primary-1);
+        margin-left: 14px;
+    }
+
+    .formBody {
+        opacity: 1;
+        transition: all 0.2s;
+        padding-top: 11px;
+    }
+
+    .formPriceBody {
+        padding-left: 16px;
+    }
+
+    .formBlock {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .formCheckbox {
+        input {
+            position: relative;
+            height: 0;
+
+            &::before {
+                position: absolute;
+                top: -7px;
+                left: 1px;
+                display: block;
+                content: "";
+                height: 16px;
+                width: 16px;
+                border-radius: 4px;
+                border: 1px solid #BDBDBD;
+            }
+        }
+
+        input:checked {
+            &::before {
+                background: no-repeat center center/55% url("@/assets/icons/card/checkbox.svg");
+            }
+        }
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        padding-bottom: 7px;
+        cursor: pointer;
+    }
+
+    input {
+        margin-right: 8px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .onlyPhoto {
+        padding-top: 10px;
+    }
+
+    .sendButton {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .formReset {
+        @include font-default(400, 13px, 16px, #706D7A);
+        display: flex;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .arrowDown {
+        transform: rotate(-90deg);
+        transition: all 0.1s;
+    }
+}
+
+.unVisiable {
+    display: none;
+
+    * {
+        height: 0;
+    }
+}
+
+
+
+@media (max-width: $lg) {
+    .filter {
+        margin: 0; 
+        
+        .formPriceBody input {
+            width: 40%;
+        }
+
+        .title {
+            @include font-default(400, 14px, 16px, #706D7A);
+            width: 100%;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin: 20px 0 0;
+            border: 1px solid #BDBDBD;
+            cursor: pointer;
+        }
+    }
+}

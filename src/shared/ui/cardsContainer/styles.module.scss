@@ -1,0 +1,49 @@
+@import "@/shared/styles/vars";
+
+
+.root {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    justify-content: space-between;
+}
+
+
+@media (max-width: $xl) {
+    .root {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .root {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: $md) {
+    .root {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 443px) {
+    .root {
+        display: grid;
+        grid-template-columns: repeat(1, 90%);
+        gap: 24px;
+        justify-content: center;
+    }
+}

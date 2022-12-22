@@ -1,0 +1,60 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.view {
+    p {
+        display: inline-block;
+    }
+
+    .button {
+        display: inline-block;
+
+        p {
+            @include font-default(400, 14px, 16.8px, $color-text-primary-2);
+        }
+
+        &_icon {
+            fill: #bdbdbd;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 45px;
+        }
+    }
+
+
+
+    .buttonIcon {
+        margin-left: 5px;
+    }
+
+    .buttonActive {
+        cursor: pointer;
+        color: #2a2349;
+        padding-bottom: 6px;
+        border-bottom: 5px solid #00ccdb;
+        user-select: none;
+        display: inline-block;
+
+        .buttonIcon {
+            fill: #2a2349;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 45px;
+        } 
+    }
+}
+
+@media (max-width: $md) {
+    .view p, .sort p {
+        display: none;
+    }
+
+    .button, .buttonActive {
+        transform: scale(1.2);
+    }
+}
+
+

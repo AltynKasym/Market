@@ -1,0 +1,19 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    width: 100%;
+    height: 24px;
+    @include center-elements();
+
+    .title {
+        width: 100%;
+        @include font-default(400, 16px, 200%, $color-text-primary-2);
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

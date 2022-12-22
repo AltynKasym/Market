@@ -1,0 +1,51 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.root {
+    position: relative;
+
+    .image {
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .btnClose {
+        position: absolute;
+        top: -11px;
+        right: -11px;
+        width: 22px;
+        height: 22px;
+        @include center-elements();
+        border-radius: 50%;
+        background-color: #D62C54;
+
+
+        &:hover {
+            background-color: #DA798E;
+            transition: 0.2s;
+        }
+
+        &:enabled:active {
+            transform: scale(0.91);
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: gray;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .root {
+        .btnClose {
+            top: -5px;
+            right: -5px;
+        }
+    }
+}

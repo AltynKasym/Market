@@ -1,0 +1,20 @@
+@import "@/shared/styles/vars.scss";
+@import "@/shared/styles/mixins.scss";
+
+
+.cityItem {
+    width: 100%;
+    height: 24px;
+    @include flex-row(flex-start);
+
+    .title {
+        width: 100%;
+        @include font-default(400, 16px, 200%, $color-text-primary-2);
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+    }
+}

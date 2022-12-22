@@ -1,0 +1,26 @@
+@import "@/shared/styles/mixins";
+
+
+.btnGoogle {
+    margin-top: 16px;
+    width: 312px;
+    height: 48px;
+    padding-left: 15px;
+    @include flex-row(flex-start, center);
+    background-color: #EA4335;
+    border-radius: 8px;
+    @include font-face("Gotham Pro", 700, 14px, 150%, white);
+
+    &:hover {
+        background-color: #EF7063;
+        transition: 0.2s;
+    }
+
+    &:enabled:active {
+        transform: scale(0.98);
+    }
+
+    .googleIcon {
+        margin-right: 19.61px;
+    }
+}

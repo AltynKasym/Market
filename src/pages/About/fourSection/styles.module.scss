@@ -1,0 +1,183 @@
+.four {
+    width: 100%;
+    padding: 190px 20px 150px;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+        min-width: 410px;
+        min-height: 480px;
+        margin-left: 200px;
+    }
+
+    .text {
+        max-width: 519px;
+        margin: 105px 210px 0 30px;
+
+        .title {
+            max-width: 405px;
+            font: 700 48px/58px 'Inter';
+            color: #2A2349;
+        }
+
+        .descr {
+            margin-top: 30px;
+            font: 400 18px/170% 'Inter';
+            color: #2A2349;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .four {
+        padding: 150px 20px;
+
+        .text {
+            margin: 40px 80px 0 20px;
+
+            .title {
+                font: 700 40px/50px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/170% 'Inter';
+            }
+        }
+
+        .icon {
+            min-width: 410px;
+            min-height: 480px;
+            margin-left: 80px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .four {
+        padding: 85px 20px;
+
+        .text {
+            margin: 40px 20px 0 20px;
+
+            .title {
+                font: 700 38px/40px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/170% 'Inter';
+            }
+        }
+
+        .icon {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .four {
+        flex-direction: column-reverse;
+        gap: 30px;
+        align-items: center;
+        padding: 60px 20px;
+
+
+        .text {
+            margin: 0;
+            max-width: 900px;
+            text-align: center;
+
+            .title {
+                max-width: 100%;
+                font: 700 30px/30px 'Inter';
+            }
+
+            .descr {
+                font: 400 18px/160% 'Inter';
+            }
+        }
+
+        .icon {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .four {
+        padding: 40px 20px;
+
+        .text {
+            .title {
+                font: 700 20px/22px 'Inter';
+            }
+
+            .descr {
+                margin-top: 20px;
+                font: 400 14px/130% 'Inter';
+            }
+        }
+
+        .icon {
+            margin: auto;
+            min-width: 220px;
+            min-height: auto;
+        }
+    }
+}
+
+.animationBlockOne {
+    animation: animationBlockOne 1.4s 0.4s ease-in-out infinite alternate;
+}
+
+.animationBlockTwo {
+    animation: animationBlockTwo 1.4s 0.6s ease-in-out infinite alternate;
+}
+
+.animationBlockThree {
+    animation: animationBlockThree 1.4s 0.8s ease-in-out infinite alternate;
+}
+
+.animationLine {
+    animation: animationLine 1.4s 1s ease-in-out infinite alternate;
+}
+
+@keyframes animationBlockOne {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(10px)
+    }
+}
+
+@keyframes animationBlockTwo {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(10px)
+    }
+}
+
+@keyframes animationBlockThree {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(10px)
+    }
+}
+
+@keyframes animationLine {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

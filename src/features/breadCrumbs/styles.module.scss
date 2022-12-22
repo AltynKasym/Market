@@ -1,0 +1,62 @@
+@import "@/shared/styles/vars";
+@import "@/shared/styles/mixins";
+
+
+.breadCrumbs {
+    padding: 24px 0;
+    display: flex;
+
+    .oneBlock {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .circle {
+            border: 3px solid $color-link-primary;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .folder {
+            @include font-default(400, 15px, 120%, $color-text-primary-2);
+        }
+    }
+
+    .crumb {
+        display: flex;
+        align-items: center;
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+
+            div {
+                width: 4px;
+                height: 4px;
+                background: $color-link-primary;
+                border-radius: 50%
+            }
+        }
+
+        .folder {
+            @include font-default(400, 15px, 120%, #BDBDBD);
+        }
+    }
+}
+
+
+@media (max-width: $md) {
+    .breadCrumbs {
+        padding: 15px 0;
+    }
+
+    .divider {
+        margin: 0 5px;
+    }
+}

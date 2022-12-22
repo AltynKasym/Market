@@ -1,0 +1,20 @@
+.checkBox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D5DAE1;
+    border: 1px solid #FFCDBC;
+    box-shadow: 0 1.25px 2.5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.checked {
+    background-color: #D34818;
+}
+
+/* TODO: hover */
+/* TODO: color svg */

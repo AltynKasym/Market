@@ -1,0 +1,59 @@
+.selectLocation {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1002;
+    width: 80%;
+
+    .container {
+        .location {
+            width: 100%;
+            height: auto;
+            margin: auto;
+
+            .title {
+                background-color: white;
+                font: 400 15px/110% 'Inter';
+                padding: 10px 15px;
+                margin-bottom: 0;
+
+                span {
+                    margin-left: 10px;
+                    color: #00CCDB;
+                }
+            }
+
+            .text {
+                cursor: pointer;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                overflow: scroll;
+                max-height: 300px;
+
+                &::-webkit-scrollbar {
+                    height: 0;
+                    width: 0;
+                }
+
+                p {
+                    font: 400 15px/110% 'Inter';
+                    padding: 5px 15px;
+                    transition: 0.2s;
+                }
+
+                p:hover {
+                    background-color: #eaeaea;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .selectLocation {
+        width: 100%;
+    }
+}

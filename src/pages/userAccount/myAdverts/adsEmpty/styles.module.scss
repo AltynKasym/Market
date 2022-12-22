@@ -1,0 +1,82 @@
+@import "@/shared/styles/mixins.scss";
+@import "@/shared/styles/vars.scss";
+
+.title {
+    @include font-default(700, 24px, 24px, $color-text-primary-1);
+}
+
+.adsEmpty {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .icon {
+        width: 472px;
+        margin: 71px 0 220px 0;
+
+        .backIcon {
+            position: absolute;
+            margin-left: calc(-50px);
+        }
+
+        .frontIcon {
+            position: relative;
+            margin: 20px 0 0 43px;
+        }
+    }
+
+    .btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 500px;
+
+        .btn {
+            background-color: $color-link-primary;
+            cursor: pointer;
+            text-transform: uppercase;
+            height: 48px;
+            align-items: center;
+            padding: 0 16px;
+            border-radius: 8px;
+            display: flex;
+            gap: 9px;
+            @include font-default(700, 14px, 17px, #FFFFFF)
+       }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .adsEmpty {
+        .icon {
+            width: 100%;
+            margin: 50px 0 120px 0;
+    
+            .backIcon {
+                margin-left: 0;
+                max-width: 90%;
+            }
+    
+            .frontIcon {
+                margin: 20px 0 0 43px;
+                max-width: 90%;
+            }
+        }
+
+        .btns {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .title {
+        font-size: 20px;
+    }
+
+    .adsEmpty {
+        .icon {
+            margin: 30px 0 80px 0;
+        }
+    }
+}

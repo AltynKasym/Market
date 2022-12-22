@@ -1,0 +1,56 @@
+.root {
+    margin-top: 27px;
+    margin-bottom: 242px;
+    background: #FFFFFF;
+    font-family: "Inter", sans-serif !important;
+
+    .messageBlock {
+        height: 536px;
+        padding: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        overflow-y: scroll;
+        border-bottom: 1px solid rgba(224, 224, 224, 0.8);
+    }
+}
+
+@media(max-width: 768px) {
+    .root {
+        .messageBlock {
+            .mess {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 420px) {
+    .root {
+        .messageBlock {
+            .mess {
+                width: 80%;
+                padding: 10px;
+
+                .imgBlock {
+                    .download {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .otherMess {
+                margin-right: 0px;
+            }
+
+            .myMess {
+                margin-left: auto;
+                //float: right;
+            }
+        }
+    }
+}
